@@ -1,0 +1,21 @@
+{
+  "name": "docupro-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DocuPro — Plateforme SaaS de Gestion Documentaire et d'Archivage",
+  "packageManager": "pnpm@10.33.3",
+  "scripts": {
+    "build": "pnpm -r --filter=!docupro-monorepo build",
+    "lint": "pnpm -r --filter=!docupro-monorepo lint",
+    "test": "pnpm -r --filter=!docupro-monorepo test",
+    "dev:api": "pnpm --filter=@docupro/api dev",
+    "dev:web": "pnpm --filter=@docupro/web dev",
+    "dev:worker": "pnpm --filter=@docupro/worker dev",
+    "infra:up": "docker compose -f infrastructure/docker-compose.yml up -d",
+    "infra:down": "docker compose -f infrastructure/docker-compose.yml down"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "prettier": "^3.3.3"
+  }
+}

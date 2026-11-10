@@ -1,0 +1,25 @@
+{
+  "name": "@docupro/worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "start": "node dist/main.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@docupro/contracts": "workspace:*",
+    "bullmq": "^5.40.1",
+    "dotenv": "^16.4.7",
+    "ioredis": "^5.4.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@docupro/config": "workspace:*",
+    "@types/node": "^22.10.2",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
