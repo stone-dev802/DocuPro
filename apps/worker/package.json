@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "tsc",
+    "lint": "tsc --noEmit",
     "dev": "ts-node src/main.ts",
     "start": "node dist/main.js",
     "clean": "rimraf dist"
